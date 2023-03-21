@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <title>大屏可视化项目</title>
+</head>
+<script>
+  const deviceWidth = document.documentElement.clientWidth;
+  const deviceHeight = document.documentElement.clientHeight;
+  const ratio = deviceWidth / deviceHeight
+  const pageWidth = ratio > 16 / 9 ? deviceWidth * (16 / 9) : deviceWidth;
+  const pageHeight = pageWidth / (16 / 9)
+
+  // 在根元素head中使用JS设置1rem = Wp / 100
+  const string = `
+  <style>
+  html {
+    font-size: ${pageHeight / 100}px;
+  }
+  </style>
+`
+  document.write(string)
+</script>
+
+<body>
+
+<div id="root"></div>
+
+<script>
+  const root = document.querySelector('#root')
+  root.style.width = `${pageWidth}px`
+  root.style.height = `${pageHeight}px`
+  root.style.marginTop = `${(deviceHeight - pageHeight) / 2}px`
+</script>
+
+<script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
