@@ -9,15 +9,15 @@
 <script>
   const deviceWidth = document.documentElement.clientWidth;
   const deviceHeight = document.documentElement.clientHeight;
-  const ratio = deviceWidth / deviceHeight
-  const pageWidth = ratio > 16 / 9 ? deviceWidth * (16 / 9) : deviceWidth;
+  // 窗口
+  window.pageWidth = deviceWidth / deviceHeight > 16 / 9 ? deviceHeight * (16 / 9) : deviceWidth;
   const pageHeight = pageWidth / (16 / 9)
 
   // 在根元素head中使用JS设置1rem = Wp / 100
   const string = `
   <style>
   html {
-    font-size: ${pageHeight / 100}px;
+    font-size: ${pageWidth / 100}px;
   }
   </style>
 `
@@ -33,6 +33,7 @@
   root.style.width = `${pageWidth}px`
   root.style.height = `${pageHeight}px`
   root.style.marginTop = `${(deviceHeight - pageHeight) / 2}px`
+  root.style.marginLeft = `${(deviceWidth - pageWidth) / 2}px`
 </script>
 
 <script type="module" src="/src/main.tsx"></script>
