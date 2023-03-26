@@ -5,7 +5,7 @@ import {Home} from './pages/home';
 import {Config} from './pages/config';
 
 export const App = () => (
-  <div className="App">
+  <div className="app">
     <HashRouter>
       <Switch>
         <Route exact path="/">

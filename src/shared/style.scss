@@ -14,19 +14,13 @@ code {
   monospace;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-weight: normal;
-}
-
-*::before {
-  box-sizing: border-box;
-}
-
-*::after {
-  box-sizing: border-box;
 }
 
 body {
@@ -34,7 +28,16 @@ body {
   font-size: 16px;
 }
 
-#root {
+.root {
   margin: auto 0;
-  background: lightblue;
+  background: #add8e6;
+  display: flex;
+  flex-direction: column;
+
+  .app {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
 }
