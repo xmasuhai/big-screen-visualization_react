@@ -6,16 +6,6 @@ import {Config} from './pages/config';
 
 export const App = () => (
   <div className="app">
-    <HashRouter>
-      <Switch>
-        <Route exact path="/">
-          <Home/>
-        </Route>
-        <Route exact path="/config">
-          <Config/>
-        </Route>
-      </Switch>
-    </HashRouter>
   </div>
 )
 
