@@ -2,12 +2,13 @@
 
 .home {
   background-color: #010310;
+  color: #fff;
   flex: 1;
   display: flex;
   flex-direction: column;
 
   header {
-    height: px(99); // 设置该图片的像素高度 为参数即可
+    height: px(99); // 设置该图片的像素高度 为参数即可 // width 默认为 100%
     background-size: cover; // 按原比例 缩放
   }
 
@@ -22,19 +23,75 @@
     grid-row-gap: px(28);
 
     $box-styles: (
-      1: #ffc0cb,
-      2: #ffa07a,
-      3: #add8e6,
-      4: #e0ffff,
-      5: #90ee90
+      1: transparent,
+      2: transparent,
+      3: transparent,
+      4: transparent,
+      5: transparent,
     );
-
+    // section1~5
     @each $key, $color in $box-styles {
       .section#{$key} {
         grid-area: box#{$key};
         background-color: $color;
-        border: 1px solid #0f3362;
+      }
+    }
+
+    > section {
+      text-align: center;
+    }
+
+    .bordered {
+      background-color: rgba(12, 17, 57, 0.8);
+      border: 1px solid #0764bc;
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0 0 2px 0 #0f3361,
+      inset 0 0 2px 0 #0f3361;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
         border-radius: 4px;
+        box-shadow: 17px 0 0 -16px #0f3361,
+        -17px 0 0 -16px #0f3361,
+        0 17px 0 -16px #0f3361,
+        0 -17px 0 -16px #0f3361,
+        9px 0 0 -8px #0d4483,
+        -9px 0 0 -8px #0d4483,
+        0 9px 0 -8px #0d4483,
+        0 -9px 0 -8px #0d4483,;
+
+      }
+
+    }
+
+    .jurisdictional-statistics {
+      height: px(315);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h2 {
+        flex-shrink: 0;
+        border: 1px solid #0a5299;
+        display: inline-block;
+        border-top-left-radius: px(4);
+        border-bottom-right-radius: px(4);
+        font-size: px(22);
+        line-height: px(24);
+        padding: px(10) px(28);
+        text-shadow: 0 0 px(3) #fff;
+
+      }
+
+      .chart {
+        flex: 1;
+        width: 100%;
       }
     }
 
