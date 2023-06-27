@@ -9,11 +9,11 @@
 <script>
   const deviceWidth = document.documentElement.clientWidth;
   const deviceHeight = document.documentElement.clientHeight;
-  // 窗口
+  // 窗口 暴露 window.pageWidth
   window.pageWidth = deviceWidth / deviceHeight > 16 / 9 ? deviceHeight * (16 / 9) : deviceWidth;
   const pageHeight = pageWidth / (16 / 9)
 
-  // 在根元素head中使用JS设置1rem = Wp / 100
+  // 在根元素 head 中使用 JS 设置 1rem = Wp / 100
   const string = `
   <style>
   html {

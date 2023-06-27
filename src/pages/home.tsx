@@ -1,39 +1,62 @@
-import React, {useEffect, useRef} from 'react';
-import './home.scss';
-import headerBg from '../images/header.png';
+import React, {useEffect, useRef} from 'react'
+import './home.scss'
+import headerBg from '../images/header.png'
 import * as echarts from 'echarts'
+
+// 自使用字体函数
+const px = n => n / 2420 * (window as any).pageWidth
 
 export const Home = () => {
   // 获取节点
   const divRef = useRef(null)
+
   // 挂载后获取
   useEffect(() => {
     // 基于准备好的 dom，初始化 echarts 实例
     const myChart =
-      echarts.init(divRef.current);
+      echarts.init(divRef.current)
     // 绘制图表
     myChart.setOption({
       textStyle: {
         color: '#79839e',
-        fontSize: 6,
+        fontSize: px(12),
       },
       xAxis: {
-        data: ['1', '2', '3', '4', '5', '6', '7', '8', '9',],
+        data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区',],
+        axisTick: {show: false},
+        axisLine: {
+          lineStyle: {color: '#083B70'}
+        },
         axisLabel: {
-          fontSize: 6,
+          show: true,
+          interval: 0,
+          fontSize: px(12),
+          formatter(val) {
+            return val.split('').join('\n')
+            /*
+            if (val.length > 2) {
+              const arr = val.split('')
+              arr.splice(2, 0, '\n')
+              return arr.join('')
+            } else {
+              return val
+            }
+            */
+          },
         },
       },
       yAxis: {
+        splitLine: {show: false},
         axisLabel: {
-          fontSize: 6,
+          fontSize: px(12),
         },
       },
       grid: {
         containLabel: true,
-        x: 20,
-        y: 20,
-        x2: 20,
-        y2: 20,
+        x: px(10),
+        y: px(20),
+        x2: px(10),
+        y2: px(10),
       },
       series: [
         {
@@ -42,7 +65,7 @@ export const Home = () => {
           data: [10, 20, 36, 41, 15, 26, 37, 18, 29,]
         }
       ]
-    });
+    })
 
   }, [])
 
@@ -62,5 +85,5 @@ export const Home = () => {
         <section className="bordered section5"></section>
       </main>
     </div>
-  );
-};
+  )
+}
