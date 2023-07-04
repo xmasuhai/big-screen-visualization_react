@@ -1,10 +1,9 @@
 import React, {useEffect, useRef} from 'react'
 import * as echarts from 'echarts'
+import {px} from '../shared/px'
+import {createEchartsOptions} from '../shared/create-echarts-options'
 
-// 自使用字体函数
-const px = n => n / 2420 * (window as any).pageWidth
 export const Chart1 = () => {
-
   // 获取节点
   const divRef = useRef(null)
 
@@ -14,11 +13,7 @@ export const Chart1 = () => {
     const myChart =
       echarts.init(divRef.current)
     // 绘制图表
-    myChart.setOption({
-      textStyle: {
-        color: '#79839e',
-        fontSize: px(12),
-      },
+    myChart.setOption(createEchartsOptions({
       xAxis: {
         data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区',],
         axisTick: {show: false},
@@ -49,13 +44,7 @@ export const Chart1 = () => {
           fontSize: px(12),
         },
       },
-      grid: {
-        containLabel: true,
-        x: px(10),
-        y: px(20),
-        x2: px(10),
-        y2: px(10),
-      },
+
       series: [
         {
           name: ' 销量 ',
@@ -64,6 +53,7 @@ export const Chart1 = () => {
         }
       ]
     })
+    )
 
   }, [])
 
