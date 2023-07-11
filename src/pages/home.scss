@@ -32,7 +32,7 @@
     );
     // section1~5
     @each $key, $color in $box-styles {
-      .section#{$key} {
+      > .section#{$key} {
         grid-area: box#{$key};
         background-color: $color;
       }
@@ -40,6 +40,9 @@
 
     > section {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .bordered {
@@ -71,6 +74,7 @@
 
     }
 
+    // 管辖统计
     .jurisdictional-statistics {
       height: px(315);
       display: flex;
@@ -97,7 +101,8 @@
       }
     }
 
-    .破获排名 {
+    // 破案排名
+    .case-solving-ranking {
       height: px(423);
       display: flex;
       flex-direction: column;

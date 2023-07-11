@@ -48,12 +48,12 @@ export const Chart2 = () => {
   }, [])
 
   return (
-    <div className="bordered 破获排名">
+    <div className="bordered case-solving-ranking">
       <h2>案件破获排名</h2>
       <div ref={divRef} className="chart"/>
       <div className="legend">
         <span className="first"/> 破案排名 1
-        <span className="second"/> 破案排名 1
+        <span className="second"/> 破案排名 2
       </div>
     </div>
   )
