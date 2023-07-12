@@ -139,6 +139,15 @@
           background: #f00;
           margin: 0 px(10);
         }
+
+        .first {
+          background: linear-gradient(90deg, #2034f9 0%, #04a1ff 100%);
+        }
+
+        .second {
+          background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);
+        }
+
       }
     }
 
