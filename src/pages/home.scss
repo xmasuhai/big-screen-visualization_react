@@ -1,8 +1,8 @@
 @import '../shared/helper';
 
 // 左右居中
-%horizon-center-2620 {
-  width: px(2620);
+%horizon-center-2420 {
+  width: px(2420);
   margin: 0 auto;
 }
 
@@ -16,14 +16,14 @@
 
   > header {
     // 左右居中
-    @extend %horizon-center-2620;
+    @extend %horizon-center-2420;
     height: px(99); // 设置该图片的像素高度 为参数即可 // width 默认为 100%
     background-size: cover; // 按原比例 缩放
   }
 
   > footer {
     height: px(68);
-    margin-top: px(20);
+    margin: px(20) 0 1px;
     border: 1px solid #0d2d59;
     border-radius: 4px;
     background: #0c0d2b;
@@ -35,7 +35,7 @@
 
   > main {
     // 左右居中
-    @extend %horizon-center-2620;
+    @extend %horizon-center-2420;
     padding-top: px(30);
     flex: 1;
     display: grid;
@@ -98,7 +98,8 @@
 
     // 管辖统计 // 破案排名
     .jurisdictional-statistics,
-    .case-solving-ranking {
+    .case-solving-ranking,
+    .trends-in-crime {
       height: px(315);
       display: flex;
       align-items: center;
@@ -125,10 +126,7 @@
     }
 
     // 管辖统计
-    .jurisdictional-statistics {
-      height: px(315);
-
-    }
+    .jurisdictional-statistics {height: px(315);}
 
     // 破案排名
     .case-solving-ranking {
@@ -162,6 +160,8 @@
       }
     }
 
+    // 发案趋势
+    .trends-in-crime {height: px(315);}
   }
 
   .label-text {
