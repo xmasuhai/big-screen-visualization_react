@@ -39,9 +39,8 @@
     padding-top: px(30);
     flex: 1;
     display: grid;
-    grid-template: 'box1 box2 box4 box5'
-                    'box1 box2 box4 box5' 755fr
-                    'box3 box3 box4 box5' 363fr / 366fr 748fr 811fr 747fr;
+    grid-template: "box1 box2 box4 box5" 755fr
+      "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
     grid-column-gap: px(28);
     grid-row-gap: px(28);
 
