@@ -1,5 +1,11 @@
 @import '../shared/helper';
 
+// 左右居中
+%horizon-center-2620 {
+  width: px(2620);
+  margin: 0 auto;
+}
+
 .home {
   background-color: #010310;
   color: #fff;
@@ -9,11 +15,27 @@
   flex-direction: column;
 
   > header {
+    // 左右居中
+    @extend %horizon-center-2620;
     height: px(99); // 设置该图片的像素高度 为参数即可 // width 默认为 100%
     background-size: cover; // 按原比例 缩放
   }
 
+  > footer {
+    height: px(68);
+    margin-top: px(20);
+    border: 1px solid #0d2d59;
+    border-radius: 4px;
+    background: #0c0d2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6px;
+  }
+
   > main {
+    // 左右居中
+    @extend %horizon-center-2620;
     padding-top: px(30);
     flex: 1;
     display: grid;
@@ -118,6 +140,7 @@
         justify-content: flex-end;
         width: 100%;
         padding: 0 px(20) px(10);
+        font-style: italic;
 
         > .first,
         > .second {
@@ -141,4 +164,8 @@
 
   }
 
+  .label-text {
+    transform: scale(0.6);
+    white-space: nowrap;
+  }
 }

@@ -26,7 +26,7 @@ export const Chart2 = () => {
             '永登县公安局', '皋兰县公安局', '榆中县公安局', '新区公安局'],
           axisLabel: {
             formatter(val) {
-              return val.replace('公安局', '\n公安局');
+              return val.replace('公安局', '\n公安局')
             }
           }
         },
@@ -37,7 +37,7 @@ export const Chart2 = () => {
             data: [1, 2, 3, 4, 5, 6, 7, 8, 9],
             itemStyle: {
               normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 1, 0,[
+                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
                   {offset: 0, color: '#2034f9'},
                   {offset: 1, color: '#04a1ff'},
                 ]),
@@ -50,7 +50,7 @@ export const Chart2 = () => {
             data: [2, 3, 4, 5, 6, 7, 8, 9, 10],
             itemStyle: {
               normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 1, 0,[
+                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
                   {offset: 0, color: '#b92aE8'},
                   {offset: 1, color: '#6773E7'},
                 ]),
@@ -68,8 +68,8 @@ export const Chart2 = () => {
       <h2>案件破获排名</h2>
       <div ref={divRef} className="chart"/>
       <div className="legend">
-        <span className="first"/> 破案排名 1
-        <span className="second"/> 破案排名 2
+        <span className="first"/><span className="label-text">破案排名 1</span>
+        <span className="second"/><span className="label-text">破案排名 2</span>
       </div>
     </div>
   )
