@@ -64,6 +64,11 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      :first-child {
+        margin-bottom: px(18);
+      }
+
     }
 
     .bordered {
@@ -95,12 +100,14 @@
 
     }
 
-    // 管辖统计 // 破案排名
+    // 管辖统计 // 破案排名 // 发案趋势 // 案发时段
     .jurisdictional-statistics,
     .case-solving-ranking,
-    .trends-in-crime {
+    .trends-in-crime,
+    .incident-period {
       height: px(315);
       display: flex;
+      flex: 1;
       align-items: center;
       justify-content: space-between;
       flex-direction: column;
@@ -159,8 +166,8 @@
       }
     }
 
-    // 发案趋势
-    .trends-in-crime {height: px(315);}
+    // 发案趋势 案发时段
+    .trends-in-crime {height: px(363);}
   }
 
   .label-text {
