@@ -104,10 +104,10 @@
     .jurisdictional-statistics,
     .case-solving-ranking,
     .trends-in-crime,
-    .incident-period {
+    .incident-period,
+    .success-result {
       height: px(315);
       display: flex;
-      flex: 1;
       align-items: center;
       justify-content: space-between;
       flex-direction: column;
@@ -167,7 +167,32 @@
     }
 
     // 发案趋势 案发时段
-    .trends-in-crime {height: px(363);}
+    .trends-in-crime,
+    .incident-period {height: px(363);}
+
+    // 战果
+    .success-result{
+      > table {
+        margin-top: px(38);
+        border-collapse: collapse;
+        th, td {
+          border: 1px solid #1a3671;
+        }
+        thead {
+          th {
+            height: px(70);
+            box-shadow: inset 0 0 px(60) 0 #1f3d85;
+          }
+        }
+        tbody {
+          td {height: px(50); width: px(84);
+            background: #1c2456;
+          }
+
+        }
+      }
+    }
+
   }
 
   .label-text {
