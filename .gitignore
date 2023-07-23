@@ -7,3 +7,4 @@ dist-ssr
 .vscode
 .yarn
 yarn-error.log
+/.yarnrc.yml

@@ -100,7 +100,7 @@
 
     }
 
-    // 管辖统计 // 破案排名 // 发案趋势 // 案发时段
+    // 管辖统计 // 破案排名 // 发案趋势 // 案发时段 // 战果
     .jurisdictional-statistics,
     .case-solving-ranking,
     .trends-in-crime,
@@ -108,14 +108,14 @@
     .success-result {
       height: px(315);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      flex-direction: column;
 
       h2 {
         flex-shrink: 0;
         border: 1px solid #0a5299;
-        display: inline-block;
+        //display: inline-block;
         border-top-left-radius: px(4);
         border-bottom-right-radius: px(4);
         font-size: px(22);
@@ -131,10 +131,14 @@
       }
     }
 
+    // 发案趋势 案发时段
+    .trends-in-crime,
+    .incident-period {height: px(363);}
+
     // 管辖统计
     .jurisdictional-statistics {height: px(315);}
 
-    // 破案排名
+    // 破获排名
     .case-solving-ranking {
       height: px(423);
 
@@ -144,7 +148,6 @@
         justify-content: flex-end;
         width: 100%;
         padding: 0 px(20) px(10);
-        font-style: italic;
 
         > .first,
         > .second {
@@ -166,26 +169,32 @@
       }
     }
 
-    // 发案趋势 案发时段
-    .trends-in-crime,
-    .incident-period {height: px(363);}
-
     // 战果
-    .success-result{
+    .success-result {
       > table {
         margin-top: px(38);
         border-collapse: collapse;
-        th, td {
+
+        th,
+        td {
           border: 1px solid #1a3671;
+
+          //span {
+          //  transform: scale(0.7);
+          //}
         }
+
         thead {
           th {
             height: px(70);
             box-shadow: inset 0 0 px(60) 0 #1f3d85;
           }
         }
+
         tbody {
-          td {height: px(50); width: px(84);
+          td {
+            height: px(50);
+            width: px(84);
             background: #1c2456;
           }
 

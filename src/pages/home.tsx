@@ -4,11 +4,11 @@ import headerBg from '../images/header.png'
 import {Chart1} from '../components/chart-1'
 import {Chart2} from '../components/chart-2'
 import {Chart3} from '../components/chart-3'
-import {Chart4} from "../components/chart-4";
-import {Chart5} from "../components/chart-5";
+import {Chart4} from '../components/chart-4'
+import {Chart5} from '../components/chart-5'
 
 export const Home = () => {
-  const year = new Date().getFullYear();
+  const year = new Date().getFullYear()
   return (
     <div className="home">
       <header style={{backgroundImage: `url(${headerBg})`}}></header>
