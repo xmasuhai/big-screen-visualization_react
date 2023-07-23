@@ -30,7 +30,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 6px;
   }
 
   > main {
@@ -39,7 +38,8 @@
     padding-top: px(30);
     flex: 1;
     display: grid;
-    grid-template: "box1 box2 box4 box5" 755fr
+    grid-template:
+      "box1 box2 box4 box5" 755fr
       "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
     grid-column-gap: px(28);
     grid-row-gap: px(28);
@@ -66,7 +66,7 @@
       justify-content: space-between;
 
       :first-child {
-        margin-bottom: px(18);
+        margin-bottom: px(8);
       }
 
     }
@@ -100,12 +100,13 @@
 
     }
 
-    // 管辖统计 // 破案排名 // 发案趋势 // 案发时段 // 战果
+    // 管辖统计 // 破案排名 // 发案趋势 // 案发时段 // 战果 // 籍贯
     .jurisdictional-statistics,
     .case-solving-ranking,
     .trends-in-crime,
     .incident-period,
-    .success-result {
+    .success-result,
+    .native-place {
       height: px(315);
       display: flex;
       flex-direction: column;
@@ -115,14 +116,17 @@
       h2 {
         flex-shrink: 0;
         border: 1px solid #0a5299;
-        //display: inline-block;
         border-top-left-radius: px(4);
         border-bottom-right-radius: px(4);
-        font-size: px(22);
-        line-height: px(24);
-        padding: px(10) px(28);
+        font-size: px(12);
+        line-height: px(12);
+        padding: px(8) px(24);
         text-shadow: 0 0 px(3) #fff;
 
+        span {
+          display: inline-block;
+          transform: scale(.8);
+        }
       }
 
       .chart {
@@ -202,10 +206,16 @@
       }
     }
 
+    // 籍贯
+    .native-place {
+      height: px(755);
+      background: transparent;
+    }
+
   }
 
   .label-text {
-    transform: scale(0.6);
+    transform: scale(0.8);
     white-space: nowrap;
   }
 }
