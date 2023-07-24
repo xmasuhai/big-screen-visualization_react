@@ -106,7 +106,8 @@
     .trends-in-crime,
     .incident-period,
     .success-result,
-    .native-place {
+    .native-place,
+    .age-bracket {
       height: px(315);
       display: flex;
       flex-direction: column;
@@ -234,11 +235,34 @@
             background: #1cecd9;
           }
         }
-        .notes{
+        .notes {
           position: absolute;
           bottom: px(10);
           right: px(10);
         }
+      }
+
+    }
+
+    // 年龄段
+    .age-bracket {
+      display: flex;
+      flex-direction: column;
+      height: px(363);
+
+      > .charts {
+        width: 100%;
+        flex: 1;
+        border: 1px solid red;
+        display: flex;
+        padding: px(30);
+      }
+
+      &-chart-left, &-chart-middle, &-chart-right {
+        flex: 1;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
       }
 
     }
