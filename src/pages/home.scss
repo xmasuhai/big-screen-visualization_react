@@ -175,6 +175,11 @@
 
     // 战果
     .success-result {
+      & .scale-size {
+        display: inline-block;
+        transform: scale(0.8);
+      }
+
       > table {
         margin-top: px(38);
         border-collapse: collapse;
@@ -197,8 +202,8 @@
 
         tbody {
           td {
-            height: px(50);
-            width: px(84);
+            height: px(45);
+            width: px(88);
             background: #1c2456;
           }
 
@@ -210,6 +215,32 @@
     .native-place {
       height: px(755);
       background: transparent;
+
+      > .wrapper {
+        position: relative;width: 100%;flex: 1;
+        display: flex; flex-direction: column;
+        .chart {flex: 1;}
+        .legend {
+          position: absolute;top: px(40);left: px(20);display: flex;
+          align-items: center;
+          font-size: px(22); padding: px(20) px(10) px(20) 0;
+          border-radius: 0;
+          .icon {
+            margin: 0 px(10);
+            display: inline-block;
+            width: px(16);
+            height: px(16);
+            border-radius: 50%;
+            background: #1cecd9;
+          }
+        }
+        .notes{
+          position: absolute;
+          bottom: px(10);
+          right: px(10);
+        }
+      }
+
     }
 
   }

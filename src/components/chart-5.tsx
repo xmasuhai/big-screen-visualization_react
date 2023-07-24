@@ -19,34 +19,34 @@ export const Chart5: React.FC = () => {
         </thead>
         <tbody>
         <tr>
-          <td>2015</td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-          <td>5</td>
-          <td>6</td>
-          <td>7</td>
-          <td>8</td>
+          <td><span className="scale-size">2015</span> </td>
+          <td><span className="scale-size">2</span> </td>
+          <td><span className="scale-size">3</span> </td>
+          <td><span className="scale-size">4</span> </td>
+          <td><span className="scale-size">5</span> </td>
+          <td><span className="scale-size">6</span> </td>
+          <td><span className="scale-size">7</span> </td>
+          <td><span className="scale-size">8</span> </td>
         </tr>
         <tr>
-          <td>2016</td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-          <td>5</td>
-          <td>6</td>
-          <td>7</td>
-          <td>8</td>
+          <td><span className="scale-size">2016</span> </td>
+          <td><span className="scale-size">2</span> </td>
+          <td><span className="scale-size">3</span> </td>
+          <td><span className="scale-size">4</span> </td>
+          <td><span className="scale-size">5</span> </td>
+          <td><span className="scale-size">6</span> </td>
+          <td><span className="scale-size">7</span> </td>
+          <td><span className="scale-size">8</span> </td>
         </tr>
         <tr>
-          <td>2017</td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-          <td>5</td>
-          <td>6</td>
-          <td>7</td>
-          <td>8</td>
+          <td><span className="scale-size">2017</span></td>
+          <td><span className="scale-size">2</span> </td>
+          <td><span className="scale-size">3</span> </td>
+          <td><span className="scale-size">4</span> </td>
+          <td><span className="scale-size">5</span> </td>
+          <td><span className="scale-size">6</span> </td>
+          <td><span className="scale-size">7</span> </td>
+          <td><span className="scale-size">8</span> </td>
         </tr>
         </tbody>
       </table>
