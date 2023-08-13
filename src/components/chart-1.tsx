@@ -3,6 +3,7 @@ import * as echarts from 'echarts'
 import {px} from '../shared/px'
 import {createEchartsOptions} from '../shared/create-echarts-options'
 
+// 案发派出所管辖统计
 export const Chart1 = () => {
   // 获取节点
   const divRef = useRef(null)
@@ -21,12 +22,11 @@ export const Chart1 = () => {
             lineStyle: {color: '#083B70'}
           },
           axisLabel: {
-            show: true,
-            interval: 0,
-            fontSize: px(12),
+            // show: true,
+            // interval: 0,
+            // fontSize: px(12),
             formatter(val) {
-              return val.split('').join('\n')
-              /*
+              // return val.split('').join('\n') // 一列
               if (val.length > 2) {
                 const arr = val.split('')
                 arr.splice(2, 0, '\n')
@@ -34,7 +34,6 @@ export const Chart1 = () => {
               } else {
                 return val
               }
-              */
             },
           },
         },
@@ -61,7 +60,7 @@ export const Chart1 = () => {
 
   return (
     <div className="bordered jurisdictional-statistics">
-      <h2>案发派出所阁下统计数字</h2>
+      <h2>案发派出所管辖统计</h2>
       <div ref={divRef} className="chart"></div>
     </div>
   )

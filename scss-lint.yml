@@ -142,7 +142,7 @@ linters:
     enabled: true
 
   SingleLinePerProperty:
-    enabled: true
+    enabled: false
     allow_single_line_rule_sets: false
 
   SingleLinePerSelector:

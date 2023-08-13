@@ -49,7 +49,9 @@ h4,
 h5,
 h6 {
   font-size: 12px;
+
   span {
-    transform: scale(.5);
+    //transform: scale(0.5);
+    //transform-origin: center center;
   }
 }

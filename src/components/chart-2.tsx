@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from 'react'
 import * as echarts from 'echarts'
 import {createEchartsOptions} from '../shared/create-echarts-options'
 
+// 案件破获排名
 export const Chart2 = () => {
   // 获取节点
   const divRef = useRef(null)

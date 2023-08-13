@@ -7,12 +7,12 @@
 }
 
 .home {
-  background-color: #010310;
-  color: #fff;
-  font-size: px(16);
   flex: 1;
   display: flex;
   flex-direction: column;
+  background-color: #010310;
+  color: #fff;
+  font-size: px(16);
 
   > header {
     // 左右居中
@@ -38,9 +38,8 @@
     padding-top: px(30);
     flex: 1;
     display: grid;
-    grid-template:
-      "box1 box2 box4 box5" 755fr
-      "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
+    grid-template: 'box1 box2 box4 box5' 755fr /* 行高 */
+                   'box3 box3 box4 box5' 363fr /* 行高 */ / 366fr 361fr 811fr 747fr; /* 列宽 */
     grid-column-gap: px(28);
     grid-row-gap: px(28);
 
@@ -112,21 +111,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      //justify-content: space-between;
 
       h2 {
         flex-shrink: 0;
         border: 1px solid #0a5299;
         border-top-left-radius: px(4);
         border-bottom-right-radius: px(4);
-        font-size: px(12);
-        line-height: px(12);
-        padding: px(8) px(24);
+        font-size: px(22);
+        line-height: px(24);
+        padding: px(10) px(28);
         text-shadow: 0 0 px(3) #fff;
 
         span {
-          display: inline-block;
-          transform: scale(.8);
+          //display: inline-block;
+          //transform: scale(0.8);
+          //transform-origin: center center;
         }
       }
 
@@ -138,10 +138,9 @@
 
     // 发案趋势 案发时段
     .trends-in-crime,
-    .incident-period {height: px(363);}
-
-    // 管辖统计
-    .jurisdictional-statistics {height: px(315);}
+    .incident-period {
+      height: px(368);
+    }
 
     // 破获排名
     .case-solving-ranking {
@@ -159,8 +158,8 @@
           display: inline-block;
           width: px(18);
           height: px(12);
-          background: #f00;
           margin: 0 px(10);
+          background: #f00;
         }
 
         .first {
@@ -176,9 +175,10 @@
 
     // 战果
     .success-result {
-      & .scale-size {
+      .scale-size {
         display: inline-block;
-        transform: scale(0.8);
+        //transform: scale(0.8);
+        //transform-origin: center center;
       }
 
       > table {
@@ -190,7 +190,8 @@
           border: 1px solid #1a3671;
 
           //span {
-          //  transform: scale(0.7);
+          // transform: scale(0.7);
+          // transform-origin: center center;
           //}
         }
 
@@ -218,14 +219,23 @@
       background: transparent;
 
       > .wrapper {
-        position: relative;width: 100%;flex: 1;
-        display: flex; flex-direction: column;
+        position: relative;
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
         .chart {flex: 1;}
+
         .legend {
-          position: absolute;top: px(40);left: px(20);display: flex;
+          position: absolute;
+          top: px(40);
+          left: px(20);
+          display: flex;
           align-items: center;
           font-size: px(22); padding: px(20) px(10) px(20) 0;
           border-radius: 0;
+
           .icon {
             margin: 0 px(10);
             display: inline-block;
@@ -235,6 +245,7 @@
             background: #1cecd9;
           }
         }
+
         .notes {
           position: absolute;
           bottom: px(10);
@@ -253,16 +264,84 @@
       > .charts {
         width: 100%;
         flex: 1;
-        border: 1px solid red;
         display: flex;
         padding: px(30);
       }
 
-      &-chart-left, &-chart-middle, &-chart-right {
+      &-chart-left,
+      &-chart-middle,
+      &-chart-right {
         flex: 1;
-        border: 1px solid red;
         display: flex;
         flex-direction: column;
+      }
+
+      &-chart-left,
+      &-chart-middle, {
+        // 文字说明
+        .legend {
+          height: px(40);
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+
+          > span {
+            display: inline-block;
+            width: px(16);
+            height: px(10);
+            border-radius: px(2);
+            margin: 0 px(10);}
+
+          .male {
+            background: #33a4fa;
+          }
+
+          .female {
+            background: #8d70f8;
+          }
+        }
+
+        .chart {
+          position: relative;
+          display: flex;
+
+          > .chart-main {
+            flex: 1;
+          }
+
+          // 图表中心文字
+          > .chart-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: left top;
+            color: #33a4fa;
+            font-size: px(40);
+            text-shadow: 0 0 px(20) #33a4fa;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &-chart-middle, {
+        width: px(290);
+        flex-shrink: 0;
+
+        .legend {
+          justify-content: flex-start;
+        }
+      }
+
+      &-chart-right {
+        border: 1px solid #08397d;
+
+        h3 {
+          font-size: px(20);
+          color: #7ab6db;
+          margin-top: px(6);
+        }
       }
 
     }
@@ -270,7 +349,8 @@
   }
 
   .label-text {
-    transform: scale(0.8);
+    //transform: scale(0.8);
+    //transform-origin: center center;
     white-space: nowrap;
   }
 }

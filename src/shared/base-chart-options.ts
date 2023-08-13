@@ -8,10 +8,10 @@ export const baseEchartOptions = {
   title: {show: false},
   legend: {show: false},
   grid: {
-    x: px(10),
+    x: px(20),
     y: px(20),
-    x2: px(10),
-    y2: px(10),
+    x2: px(20),
+    y2: px(20),
     containLabel: true
   },
 };

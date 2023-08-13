@@ -3,6 +3,7 @@ import * as echarts from 'echarts'
 import {createEchartsOptions} from '../shared/create-echarts-options'
 import {px} from '../shared/px'
 
+// 发案趋势分析
 export const Chart3 = () => {
   const divRef = useRef(null)
 
@@ -11,17 +12,17 @@ export const Chart3 = () => {
     myChart.setOption(createEchartsOptions({
       // 标题说明文字
       legend: {
-        bottom: px(10),
+        bottom: px(0),
         textStyle: {color: 'white'},
         itemWidth: px(30),
-        itemHeight: px(16)
+        itemHeight: px(12)
       },
       // 四周空隙
       grid: {
         x: px(20),
-        x2: px(20),
+        x2: px(40),
         y: px(20),
-        y2: px(70),
+        y2: px(90),
         containLabel: true
       },
       xAxis: {

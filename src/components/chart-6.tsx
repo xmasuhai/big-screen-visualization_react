@@ -1,9 +1,9 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
 import {createEchartsOptions} from '../shared/create-echarts-options';
-import {px} from '../shared/px';
 import china from '../geo/china.json'
 
+// 全市犯罪人员籍贯分布地
 export const Chart6: React.FC = () => {
   const divRef = useRef(null);
   const colors= {

@@ -3,6 +3,7 @@ import * as echarts from 'echarts';
 import {createEchartsOptions} from '../shared/create-echarts-options';
 import {px} from '../shared/px';
 
+// 案发时段分析
 export const Chart4 = () => {
   const divRef = useRef(null);
   useEffect(() => {
