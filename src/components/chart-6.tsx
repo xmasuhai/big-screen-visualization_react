@@ -7,9 +7,9 @@ import china from '../geo/china.json'
 export const Chart6: React.FC = () => {
   const divRef = useRef(null);
   const colors= {
-    '甘肃省': '#bb31f7',
+    '甘肃省': '#15B8FD',
     '四川省': '#15b8fd',
-    '青海省': '#06e1ee',
+    '青海省': '#BB31F7',
   }
   useEffect(() => {
     const myChart = echarts.init(divRef.current)
