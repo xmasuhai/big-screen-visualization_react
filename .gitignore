@@ -8,3 +8,4 @@ dist-ssr
 .yarn
 yarn-error.log
 /.yarnrc.yml
+/pnpm-lock.yaml

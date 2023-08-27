@@ -19,26 +19,27 @@ export const Chart7: React.FC = () => {
         {
           name: '访问来源',
           type: 'pie',
-          radius: ['75%', '90%'],
+          radius: ['60%', '75%'], // 内外圈直径
           avoidLabelOverlap: false,
           label: {
             show: true,
-            position: 'inside',
-            textStyle: {color: 'white', fontSize: px(18)},
+            color: 'inherit',
+            position: 'outside',
+            textStyle: {fontSize: px(15) },
             formatter(options) {
               return options.value * 100 + '%'
             }
           },
-          labelLine: {show: false},
+          labelLine: { show: false, length: px(10), length2: px(0) },
           itemStyle: {
             borderColor: '#0F113A',
             borderWidth: px(4)
           },
           data: [
-            {value: 0.2, name: '女'},
-            {value: 0.8, name: '男'},
+            {value: 0.2, name: '女',},
+            {value: 0.8, name: '男',},
           ]
-        }
+        },
       ]
     }))
   }, [])
@@ -47,7 +48,7 @@ export const Chart7: React.FC = () => {
     <div className="age-bracket-chart-left">
       <div className="chart">
         <div className="chart-main" ref={divRef}/>
-        <div className="chart-text">性别</div>
+        <div className="chart-text">性 别</div>
       </div>
       <div className="legend">
         <span className="male"/>男

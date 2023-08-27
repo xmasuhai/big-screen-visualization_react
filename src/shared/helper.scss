@@ -1,0 +1,32 @@
+@function px($n) {
+  @return $n / 2420 * 100rem;
+}
+
+$blue: #002866;
+$font-hei: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
+"Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
+"Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei",
+"Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei,
+"WenQuanYi Zen Hei Sharp", sans-serif;
+
+// 左右居中
+@mixin horizon-center-2420 {
+  width: px(2420);
+  margin: 0 auto;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-between {
+  @include flex-column;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

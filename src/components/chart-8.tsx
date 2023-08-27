@@ -19,17 +19,18 @@ export const Chart8: React.FC = () => {
         {
           name: '访问来源',
           type: 'pie',
-          radius: ['75%', '90%'],
+          radius: ['60%', '75%'], // 内外圈直径
           avoidLabelOverlap: false,
           label: {
             show: true,
-            position: 'inside',
-            textStyle: {color: 'white', fontSize: px(20)},
+            color: 'inherit',
+            position: 'outside',
+            textStyle: {fontSize: px(15), },
             formatter(options) {
               return (options.value * 100).toFixed(0) + '%'
             }
           },
-          labelLine: {show: false},
+          labelLine: { show: false, length: px(10), length2: px(0) },
           itemStyle: {
             borderColor: '#0F113A',
             borderWidth: px(4),

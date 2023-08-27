@@ -1,0 +1,258 @@
+@import '../shared/helper';
+
+// 各图表模块
+@mixin chart {
+  // 管辖统计 // 破案排名 // 发案趋势 // 案发时段 // 战果 // 籍贯
+  .jurisdictional-statistics,
+  .case-solving-ranking,
+  .trends-in-crime,
+  .incident-period,
+  .success-result,
+  .native-place,
+  .age-bracket {
+    height: px(315);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: space-between;
+
+    h2 {
+      flex-shrink: 0;
+      border: 1px solid #0a5299;
+      border-top-left-radius: px(4);
+      border-bottom-right-radius: px(4);
+      font-size: px(22);
+      line-height: px(24);
+      padding: px(10) px(28);
+      text-shadow: 0 0 px(3) #fff;
+
+      span {
+        //display: inline-block;
+        //transform: scale(0.8);
+        //transform-origin: center center;
+      }
+    }
+
+    .chart {
+      flex: 1;
+      width: 100%;
+    }
+  }
+
+  // 发案趋势 案发时段
+  .trends-in-crime,
+  .incident-period {
+    height: px(368);
+  }
+
+  // 破获排名
+  .case-solving-ranking {
+    height: px(423);
+
+    .legend {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      padding: 0 px(20) px(10);
+
+      > .first,
+      > .second {
+        display: inline-block;
+        width: px(18);
+        height: px(12);
+        margin: 0 px(10);
+        background: #f00;
+      }
+
+      .first {
+        background: linear-gradient(90deg, #2034f9 0%, #04a1ff 100%);
+      }
+
+      .second {
+        background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);
+      }
+
+    }
+  }
+
+  // 战果
+  .success-result {
+    text-align: center;
+
+    .scale-size {
+      display: inline-block;
+      //transform: scale(0.8);
+      //transform-origin: center center;
+    }
+
+    > table {
+      margin-top: px(38);
+      border-collapse: collapse;
+
+      th,
+      td {
+        border: 1px solid #1a3671;
+
+        //span {
+        // transform: scale(0.7);
+        // transform-origin: center center;
+        //}
+      }
+
+      thead {
+        th {
+          height: px(70);
+          box-shadow: inset 0 0 px(60) 0 #1f3d85;
+        }
+      }
+
+      tbody {
+        td {
+          height: px(45);
+          width: px(88);
+          background: #1c2456;
+        }
+
+      }
+    }
+  }
+
+  // 籍贯
+  .native-place {
+    height: px(753);
+    background: transparent;
+
+    > .wrapper {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .chart {flex: 1;}
+
+      .legend {
+        position: absolute;
+        top: px(40);
+        left: px(20);
+        display: flex;
+        align-items: center;
+        font-size: px(22); padding: px(20) px(10) px(20) 0;
+        border-radius: 0;
+
+        .icon {
+          margin: 0 px(10);
+          display: inline-block;
+          width: px(16);
+          height: px(16);
+          border-radius: 50%;
+          background: #1cecd9;
+        }
+      }
+
+      .notes {
+        position: absolute;
+        bottom: px(10);
+        right: px(10);
+      }
+    }
+
+  }
+
+  // 年龄段
+  .age-bracket {
+    display: flex;
+    flex-direction: column;
+    height: px(363);
+
+    // 年龄段图表外框
+    > .charts-wrapper {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      padding: px(30);
+    }
+
+    // age-bracket-
+    &-chart-left,
+    &-chart-middle,
+    &-chart-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-chart-left,
+    &-chart-middle, {
+      // 文字说明
+      .legend {
+        height: px(40);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        > span {
+          display: inline-block;
+          width: px(16);
+          height: px(10);
+          border-radius: px(2);
+          margin: 0 px(10);}
+
+        .male {
+          background: #33a4fa;
+        }
+
+        .female {
+          background: #8d70f8;
+        }
+      }
+
+      // 图表
+      .chart {
+        position: relative;
+        display: flex;
+
+        > .chart-main {
+          position: relative;
+          flex: 1;
+        }
+
+        // 图表中心文字
+        > .chart-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transform-origin: center;
+          color: #33a4fa;
+          font-size: px(24);
+          text-shadow: 0 0 px(20) #33a4fa;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &-chart-middle, {
+      width: px(290);
+      flex-shrink: 0;
+
+      .legend {
+        justify-content: flex-start;
+      }
+    }
+
+    &-chart-right {
+      text-align: center;
+      border: 1px solid #08397d;
+
+      h3 {
+        font-size: px(20);
+        color: #7ab6db;
+        margin-top: px(6);
+      }
+    }
+
+  }
+}
