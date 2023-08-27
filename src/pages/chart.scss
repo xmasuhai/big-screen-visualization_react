@@ -9,7 +9,10 @@
   .incident-period,
   .success-result,
   .native-place,
-  .age-bracket {
+  .age-bracket,
+  .案发类型,
+  .案发街道,
+  .作案手段 {
     height: px(315);
     display: flex;
     flex-direction: column;
@@ -31,6 +34,12 @@
         //transform: scale(0.8);
         //transform-origin: center center;
       }
+    }
+
+    .charts-wrapper {
+      width: 100%;
+      flex: 1;
+      display: flex;
     }
 
     .chart {
@@ -162,17 +171,11 @@
 
   // 年龄段
   .age-bracket {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     height: px(363);
 
     // 年龄段图表外框
-    > .charts-wrapper {
-      width: 100%;
-      flex: 1;
-      display: flex;
-      padding: px(30);
-    }
+    > .charts-wrapper {padding: px(30);}
 
     // age-bracket-
     &-chart-left,

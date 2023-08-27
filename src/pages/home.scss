@@ -21,7 +21,7 @@
     height: px(68);
     margin: px(20) 0 0;
     border-top: 1px solid #0d2d59;
-    background: #0c0d2b;  }
+    background: #0c0d2b; }
 
   > main {
     @include horizon-center-2420;
@@ -80,6 +80,21 @@
       }
     }
 
+    > .section5 {
+      @include flex-column-between;
+
+      > .row1 {
+        height: px(317);
+      }
+
+      > .row2 {
+        height: px(317);
+      }
+
+      > .row3 {
+        height: px(455);
+      }
+    }
   }
 
   .label-text {
