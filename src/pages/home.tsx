@@ -6,10 +6,11 @@ import {Chart2} from '../components/chart-2'
 import {Chart3} from '../components/chart-3'
 import {Chart4} from '../components/chart-4'
 import {Chart5} from '../components/chart-5'
-import {Chart6} from "../components/chart-6";
-import {Chart7} from "../components/chart-7";
-import {Chart8} from "../components/chart-8";
-import {Chart9} from "../components/chart-9";
+import {Chart6} from '../components/chart-6'
+import {Chart7} from '../components/chart-7'
+import {Chart8} from '../components/chart-8'
+import {Chart9} from '../components/chart-9'
+import {Chart10} from '../components/chart-10'
 
 export const Home = () => {
   const year = new Date().getFullYear()
@@ -40,19 +41,22 @@ export const Home = () => {
           </div>
         </section>
         <section className="section5">
-          <div className="bordered row1 案发类型">
+          {/*案发类型*/}
+          <div className="bordered row1 crime-type">
             <h2>案发类型统计</h2>
-            <div className="charts">
-
+            <div className="charts-wrapper">
+              <Chart10/>
             </div>
           </div>
-          <div className="bordered row2 案发街道">
+          {/*案发街道*/}
+          <div className="bordered row2 crime-street">
             <h2>案发街道统计</h2>
             <div className="charts">
 
             </div>
           </div>
-          <div className="bordered row3 作案手段">
+          {/*作案手段*/}
+          <div className="bordered row3 modus-operandi">
             <h2>作案手段分析</h2>
           </div>
         </section>
