@@ -11,6 +11,7 @@ import {Chart7} from '../components/chart-7'
 import {Chart8} from '../components/chart-8'
 import {Chart9} from '../components/chart-9'
 import {Chart10} from '../components/chart-10'
+import {Chart11} from '../components/chart-11'
 
 export const Home = () => {
   const year = new Date().getFullYear()
@@ -46,6 +47,7 @@ export const Home = () => {
             <h2>案发类型统计</h2>
             <div className="charts-wrapper">
               <Chart10/>
+              <Chart11/>
             </div>
           </div>
           {/*案发街道*/}

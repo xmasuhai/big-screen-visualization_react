@@ -23,7 +23,7 @@ export const Chart7: React.FC = () => {
           avoidLabelOverlap: false,
           label: {
             show: true,
-            color: 'inherit',
+            color: 'inherit', // 引线文字颜色
             position: 'outside',
             textStyle: {fontSize: px(15) },
             formatter(options) {

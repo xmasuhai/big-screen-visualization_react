@@ -48,6 +48,8 @@ export const Chart10 = () => {
   }, [])
 
   return (
-    <div ref={divRef} className="chart"></div>
+    <div className="crime-type-chart-left">
+      <div ref={divRef} className="chart"></div>
+    </div>
   )
 }

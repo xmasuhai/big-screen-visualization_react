@@ -173,7 +173,9 @@
   }
 
   // 年龄段
-  .age-bracket {
+  .age-bracket,
+    // 案发类型
+  .crime-type {
     @include flex-column;
     height: px(363);
 
@@ -184,9 +186,8 @@
     &-chart-left,
     &-chart-middle,
     &-chart-right {
+      @include flex-column;
       flex: 1;
-      display: flex;
-      flex-direction: column;
     }
 
     &-chart-left,
@@ -200,27 +201,26 @@
         align-items: center;
         justify-content: center;
 
+        // 标题标注 区分颜色块
         > span {
           display: inline-block;
           width: px(16);
           height: px(10);
           border-radius: px(2);
-          margin: 0 px(10);}
-
-        .male {
-          background: #33a4fa;
+          margin: 0 px(10);
         }
 
-        .female {
-          background: #8d70f8;
-        }
+        .male {background: #33a4fa;}
+
+        .female {background: #8d70f8;}
       }
 
-      // 图表
+      // 图表挂载元素 + 图表中心文字
       .chart {
         position: relative;
         display: flex;
 
+        // 图表挂载元素
         > .chart-main {
           position: relative;
           flex: 1;
