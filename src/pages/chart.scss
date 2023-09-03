@@ -175,7 +175,9 @@
   // 年龄段
   .age-bracket,
     // 案发类型
-  .crime-type {
+  .crime-type,
+    // 案发街道统计
+  .crime-street {
     @include flex-column;
     height: px(363);
 
