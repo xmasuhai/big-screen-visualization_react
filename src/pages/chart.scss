@@ -10,9 +10,12 @@
   .success-result,
   .native-place,
   .age-bracket,
-  .案发类型,
-  .案发街道,
-  .作案手段 {
+    // 案发类型
+  .crime-type,
+    // 案发街道
+  .crime-street,
+    // 作案手段
+  .modus-operandi {
     height: px(315);
     display: flex;
     flex-direction: column;
@@ -191,6 +194,7 @@
       // 文字说明
       .legend {
         height: px(40);
+        //padding-right: px(10);
         display: flex;
         flex-wrap: wrap;
         align-items: center;

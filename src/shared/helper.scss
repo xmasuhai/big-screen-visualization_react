@@ -1,5 +1,7 @@
 @function px($n) {
-  @return $n / 2420 * 100rem;
+  //@return $n / 2420 * 100rem; // 报警告
+  //@return math.div($n, 2420) * 100rem; // 报错
+  @return calc($n / 2420) * 100rem;
 }
 
 $blue: #002866;

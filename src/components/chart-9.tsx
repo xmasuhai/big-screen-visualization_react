@@ -1,12 +1,12 @@
-import React, {useEffect, useRef} from 'react';
-import * as echarts from "echarts";
+import React, {useEffect, useRef} from 'react'
+import * as echarts from 'echarts'
 import {createEchartsOptions} from '../shared/create-echarts-options'
 import {px} from '../shared/px'
 
 export const Chart9 = () => {
-  const divRef = useRef(null);
+  const divRef = useRef(null)
   useEffect(() => {
-    const myChart = echarts.init(divRef.current);
+    const myChart = echarts.init(divRef.current)
     myChart.setOption(createEchartsOptions({
       color: '#F7A110',
       xAxis: {
@@ -22,7 +22,7 @@ export const Chart9 = () => {
         splitLine: {lineStyle: {color: '#073E78'}},
         axisLabel: {
           formatter(val) {
-            return val * 100 + '%';
+            return val * 100 + '%'
           }
         }
       },
@@ -47,12 +47,12 @@ export const Chart9 = () => {
         }
       }]
     }))
-  }, []);
+  }, [])
 
   return (
     <div className="age-bracket-chart-right">
       <h3>犯罪年龄趋势图</h3>
       <div ref={divRef} className="chart"></div>
     </div>
-  );
-};
+  )
+}
