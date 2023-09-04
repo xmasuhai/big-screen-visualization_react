@@ -5,7 +5,7 @@ import {px} from '../shared/px'
 
 export const Chart12 = () => {
   const divRef = useRef(null)
-  const colors = ['#F46064', '#F38E1C', '#1CDB7C', '#8D70F8', '#33A4FA']
+  // const colors = ['#F46064', '#F38E1C', '#1CDB7C', '#8D70F8', '#33A4FA']
   const data = [
     {value: 0.08, name: '东岗路'},
     {value: 0.06, name: '段家滩'},
@@ -21,7 +21,7 @@ export const Chart12 = () => {
     const myChart = echarts.init(divRef.current)
 
     myChart.setOption(createEchartsOptions({
-      color: colors,
+      // color: colors,
       xAxis: {show: false},
       yAxis: {show: false},
       grid: {x: 0, x2: 0, y: 0, y2: 0, containLabel: true},
