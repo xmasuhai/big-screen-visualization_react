@@ -88,18 +88,20 @@
     }
   }
 
-  // 战果
-  .success-result {
+  // 战果 // 作案手段
+  .success-result,
+  .modus-operandi {
+    padding: 0 px(24);
     text-align: center;
 
     .scale-size {
       display: inline-block;
-      //transform: scale(0.8);
-      //transform-origin: center center;
     }
 
     > table {
-      margin-top: px(38);
+      width: 100%;
+      table-layout: fixed;
+      margin-top: px(25);
       border-collapse: collapse;
 
       th,
@@ -128,6 +130,18 @@
 
       }
     }
+  }
+
+  // 作案手段
+  .modus-operandi {
+    > table {
+      tbody {
+        td {
+          height: px(26);
+        }
+      }
+    }
+
   }
 
   // 籍贯

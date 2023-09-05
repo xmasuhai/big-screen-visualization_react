@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
 import {createEchartsOptions} from '../shared/create-echarts-options';
+import {px} from '../shared/px'
 
 export const Chart13 = () => {
   const divRef = useRef(null);
@@ -26,15 +27,11 @@ export const Chart13 = () => {
           lineStyle: {color: '#083B70'}
         },
         axisLabel: {
-          formatter(val) {
-            if (val.length > 2) {
-              const array = val.split('');
-              array.splice(2, 0, '\n');
-              return array.join('');
-            } else {
-              return val;
-            }
-          }
+          fontSize: px(15),
+          color: "#4970a7",
+          interval: 0,
+          width: px(15),
+          overflow: "break",
         },
       },
 
