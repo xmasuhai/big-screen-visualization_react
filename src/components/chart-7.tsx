@@ -48,7 +48,7 @@ export const Chart7: React.FC = () => {
     <div className="age-bracket-chart-left">
       <div className="chart">
         <div className="chart-main" ref={divRef}/>
-        <div className="chart-text">性 别</div>
+        <div className="chart-text">性别</div>
       </div>
       <div className="legend">
         <span className="male"/>男

@@ -203,6 +203,8 @@
     &-chart-middle,
     &-chart-right {
       @include flex-column;
+      align-items: center;
+      width: px(290);
       flex: 1;
     }
 
@@ -210,8 +212,9 @@
     &-chart-middle, {
       // 文字说明
       .legend {
+
+        width: px(240);
         height: px(40);
-        //padding-right: px(10);
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -238,6 +241,8 @@
 
         // 图表挂载元素
         > .chart-main {
+          display: flex;
+          justify-content: center;
           position: relative;
           flex: 1;
         }
@@ -258,7 +263,7 @@
     }
 
     &-chart-middle, {
-      width: px(290);
+      //width: px(290);
       flex-shrink: 0;
 
       .legend {
