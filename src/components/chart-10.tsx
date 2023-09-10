@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from 'react'
 import * as echarts from 'echarts'
 import {createEchartsOptions} from '../shared/create-echarts-options'
 
+// 案发类型统计 条形图
 export const Chart10 = () => {
   const divRef = useRef(null)
   useEffect(() => {

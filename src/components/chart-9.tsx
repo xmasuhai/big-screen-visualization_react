@@ -3,6 +3,7 @@ import * as echarts from 'echarts'
 import {createEchartsOptions} from '../shared/create-echarts-options'
 import {px} from '../shared/px'
 
+// 犯罪人员年龄段分布 犯罪年龄趋势图
 export const Chart9 = () => {
   const divRef = useRef(null)
   useEffect(() => {

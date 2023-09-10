@@ -1,5 +1,6 @@
 import React from 'react';
 
+// 作案手段分析
 export const Chart14 = () => {
   return (
     <table>

@@ -3,6 +3,7 @@ import * as echarts from 'echarts'
 import {createEchartsOptions} from '../shared/create-echarts-options'
 import {px} from '../shared/px'
 
+// 案发街道统计 饼图
 export const Chart12 = () => {
   const divRef = useRef(null)
   // const colors = ['#F46064', '#F38E1C', '#1CDB7C', '#8D70F8', '#33A4FA']
@@ -60,7 +61,7 @@ export const Chart12 = () => {
   }, [])
 
   return (
-    <div className="crime-street-chart-left">
+    <div className="crime-street-chart-middle">
       <div className="chart">
         <div className="chart-main" ref={divRef}/>
       </div>

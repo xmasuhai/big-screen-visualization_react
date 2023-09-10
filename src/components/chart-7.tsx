@@ -3,7 +3,7 @@ import * as echarts from 'echarts'
 import {createEchartsOptions} from '../shared/create-echarts-options'
 import {px} from '../shared/px'
 
-// 性别
+// 犯罪人员年龄段分布 性别
 export const Chart7: React.FC = () => {
   const divRef = useRef(null)
   useEffect(() => {

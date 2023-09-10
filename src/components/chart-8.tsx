@@ -3,6 +3,7 @@ import * as echarts from 'echarts'
 import {createEchartsOptions} from '../shared/create-echarts-options'
 import {px} from '../shared/px'
 
+// 犯罪人员年龄段分布 年龄段
 export const Chart8: React.FC = () => {
   const divRef = useRef(null)
   const colors = ['#856BED', '#F46064', '#F38E1C', '#1CDB7C', '#33A4FA']

@@ -3,6 +3,7 @@ import * as echarts from 'echarts';
 import {createEchartsOptions} from '../shared/create-echarts-options';
 import {px} from '../shared/px'
 
+// 案发街道统计 条形图
 export const Chart13 = () => {
   const divRef = useRef(null);
   const data = [

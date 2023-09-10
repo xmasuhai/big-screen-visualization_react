@@ -1,5 +1,25 @@
 @import '../shared/helper';
 
+// 图标文字说明
+%legend {
+  border: 1px solid transparent;
+  width: px(240);
+  height: px(50);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  // 标题标注 区分颜色块
+  > span {
+    display: inline-block;
+    width: px(16);
+    height: px(10);
+    border-radius: px(2);
+    margin: 0 px(10);
+  }
+}
+
 // 各图表模块
 @mixin chart {
   // 管辖统计 // 破案排名 // 发案趋势 // 案发时段 // 战果 // 籍贯
@@ -212,22 +232,7 @@
     &-chart-middle, {
       // 文字说明
       .legend {
-
-        width: px(240);
-        height: px(40);
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-
-        // 标题标注 区分颜色块
-        > span {
-          display: inline-block;
-          width: px(16);
-          height: px(10);
-          border-radius: px(2);
-          margin: 0 px(10);
-        }
+        @extend %legend;
 
         .male {background: #33a4fa;}
 
