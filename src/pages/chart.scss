@@ -175,6 +175,8 @@
       flex: 1;
       display: flex;
       flex-direction: column;
+      color: #e6e7ec;
+      font-size: px(12);
 
       .chart {flex: 1;}
 
@@ -184,7 +186,8 @@
         left: px(20);
         display: flex;
         align-items: center;
-        font-size: px(22); padding: px(20) px(10) px(20) 0;
+        font-size: px(16);
+        padding: px(20) px(10) px(20) 0;
         border-radius: 0;
 
         .icon {

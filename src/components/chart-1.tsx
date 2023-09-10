@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react'
-import echarts, {EChartsOption, ECharts} from 'echarts'
+import * as echarts from 'echarts'
+import type  {EChartsOption, ECharts} from 'echarts'
 import {px} from '../shared/px'
 import {createEchartsOptions} from '../shared/create-echarts-options'
 
@@ -7,35 +8,34 @@ import {createEchartsOptions} from '../shared/create-echarts-options'
 export const Chart1: React.FC = () => {
   // 获取节点
   const divRef = useRef<HTMLDivElement>(null)
+  const myChart = useRef(null)
+  const data = [
+    {name: '兰州新区', value: 10},
+    {name: '兰州新区', value: 20},
+    {name: '兰州新区', value: 36},
+    {name: '兰州新区', value: 41},
+    {name: '兰州新区', value: 15},
+    {name: '兰州新区', value: 26},
+    {name: '兰州新区', value: 37},
+    {name: '兰州新区', value: 18},
+    {name: '兰州新区', value: 29},
+  ]
 
   // 挂载后获取
   useEffect(() => {
     // 基于准备好的 dom，初始化 echarts 实例
-    const myChart: ECharts =
-      echarts.init(divRef.current)
+    myChart.current = echarts.init(divRef.current)
 
     // 图表选项
     const options: EChartsOption = {
       xAxis: {
-        data: [
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
-          '兰州新区',
-        ],
-        axisTick: {show: false},
-        axisLine: {
-          lineStyle: {color: '#083B70'}
-        },
+        data: data.map(item => item.name),
+        axisTick: {show: false}, // 刻度线
+        // 轴线
+        axisLine: {lineStyle: {color: '#083B70'}},
+        // 刻度标签
         axisLabel: {
-          // show: true,
-          // interval: 0,
-          // fontSize: px(12),
+          // 文字内容格式器
           formatter(val: string) {
             // return val.split('').join('\n') // 一列
             if (val.length > 2) {
@@ -49,6 +49,7 @@ export const Chart1: React.FC = () => {
         },
       },
       yAxis: {
+        // grid 网格区域分隔线
         splitLine: {show: false},
         axisLine: {
           lineStyle: {color: '#083B70'},
@@ -61,13 +62,13 @@ export const Chart1: React.FC = () => {
       series: [
         {
           type: 'bar',
-          data: [10, 20, 36, 41, 15, 26, 37, 18, 29],
+          data: data.map(item => item.value),
         },
       ],
     }
 
     // 绘制图表
-    myChart.setOption(createEchartsOptions(options))
+    ;(myChart.current as ECharts).setOption(createEchartsOptions(options))
 
   }, [])
 

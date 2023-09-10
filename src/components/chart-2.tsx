@@ -1,8 +1,10 @@
 import React, {useEffect, useRef} from 'react'
 import * as echarts from 'echarts'
+import type {/*EChartsOption,*/ ECharts} from 'echarts'
+
 import {createEchartsOptions} from '../shared/create-echarts-options'
 
-type seriesData = Array<{name: string, '2021'?: number, '2022'?: number,}>
+type seriesData = Array<{ name: string, '2021'?: number, '2022'?: number, }>
 
 // 案件破获排名
 export const Chart2 = () => {
@@ -36,7 +38,7 @@ export const Chart2 = () => {
     data: data.map(i => i.name),
     axisLabel: {
       formatter(val: string) {
-        return val.replace('公安局', '\n公安局');
+        return val.replace('公安局', '\n公安局')
       }
     }
   })
@@ -76,12 +78,13 @@ export const Chart2 = () => {
     },
   ])
 
-  const drawCharts  = (data: seriesData) => {
-    myChart.current.setOption(createEchartsOptions({
-      xAxis: genXAxis(),
-      yAxis: genYAxis(data),
-      series: genSeries(data),
-    }))
+  const drawCharts = (data: seriesData) => {
+    (myChart.current as ECharts)
+      .setOption(createEchartsOptions({
+        xAxis: genXAxis(),
+        yAxis: genYAxis(data),
+        series: genSeries(data),
+      }))
 
   }
 
@@ -98,10 +101,10 @@ export const Chart2 = () => {
         {name: '皋兰县公安局', 2011: random10(), 2012: random10()},
         {name: '榆中县公安局', 2011: random10(), 2012: random10()},
         {name: '新区公安局', 2011: random10(), 2012: random10()},
-      ];
-      drawCharts(newData);
-    }, 3000);
-  }, []);
+      ]
+      drawCharts(newData)
+    }, 3000)
+  }, [])
 
   // 挂载后获取
   useEffect(() => {
