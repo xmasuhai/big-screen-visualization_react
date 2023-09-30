@@ -26,7 +26,7 @@ export const Chart8: React.FC = () => {
             show: true,
             color: 'inherit',
             position: 'outside',
-            textStyle: {fontSize: px(15), },
+            fontSize: px(15),
             formatter(options) {
               return (options.value * 100).toFixed(0) + '%'
             }

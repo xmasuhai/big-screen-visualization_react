@@ -49,15 +49,12 @@ export const Chart2 = () => {
       type: 'bar',
       data: data.map(i => i[2011]),
       itemStyle: {
-        normal: {
-          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
-            offset: 0,
-            color: '#2034F9'
-          }, {
-            offset: 1,
-            color: '#04A1FF'
-          }]),
-        }
+        color: new echarts.graphic.LinearGradient(
+          0, 0, 1, 0,
+          [
+            {offset: 0, color: '#2034F9'},
+            {offset: 1, color: '#04A1FF'},
+          ]),
       }
     },
     {
@@ -65,15 +62,12 @@ export const Chart2 = () => {
       type: 'bar',
       data: data.map(i => i[2012]),
       itemStyle: {
-        normal: {
-          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
-            offset: 0,
-            color: '#B92AE8'
-          }, {
-            offset: 1,
-            color: '#6773E7'
-          }]),
-        }
+        color: new echarts.graphic.LinearGradient(
+          0, 0, 1, 0,
+          [
+            {offset: 0, color: '#B92AE8'},
+            {offset: 1, color: '#6773E7'},
+          ]),
       }
     },
   ])

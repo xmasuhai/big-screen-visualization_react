@@ -25,7 +25,7 @@ export const Chart7: React.FC = () => {
             show: true,
             color: 'inherit', // 引线文字颜色
             position: 'outside',
-            textStyle: {fontSize: px(15) },
+            fontSize: px(15),
             formatter(options) {
               return options.value * 100 + '%'
             }

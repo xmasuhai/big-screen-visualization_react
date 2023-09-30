@@ -1,8 +1,7 @@
 import React, {useEffect, useRef} from 'react'
 import * as echarts from 'echarts'
 import {createEchartsOptions} from '../shared/create-echarts-options'
-import china from '../geo/china.json'
-import {px} from '../shared/px'
+import chinaData from '../geo/china.json'
 
 // 全市犯罪人员籍贯分布地
 export const Chart6: React.FC = () => {
@@ -17,31 +16,32 @@ export const Chart6: React.FC = () => {
     const myChart = echarts.init(divRef.current)
     // 注册地图
     // @ts-ignore
-    echarts.registerMap('CN', china)
+    echarts.registerMap('CNMap', chinaData)
     myChart.setOption(createEchartsOptions({
       xAxis: {show: false,},
       yAxis: {show: false,},
       series: [
         {
           type: 'map',
-          mapType: 'CN', // 自定义扩展图表类型
+          map: 'CNMap', // 自定义扩展图表类型
           label: {show: false, color: 'white'},
+          emphasis: {
+            label: {color: 'white'},
+            areaColor: '#5470C6',
+          },
           itemStyle: {
             areaColor: '#010D3D',
             borderColor: '#01A7F7',
-            emphasis: {
-              label: {color: 'white'},
-              areaColor: '#5470C6',
-            },
           },
+          //关联数据
           data: [
-            {name: '甘肃省', value: 1},
+            {name: '甘肃省', value: 1, },
             {name: '四川省', value: 50},
             {name: '青海省', value: 100},
           ],
         },
       ],
-
+      roam: false, // 是否开启鼠标缩放和平移漫游
       visualMap: {
         min: 1,
         max: 100,
